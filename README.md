@@ -1,2 +1,2 @@
 # PWA
-PWA example program(1^- -> 0^- 0^- 0^-)
+PWA example program \rightarrow
