@@ -11,6 +11,7 @@ usage() {
     printf "\n\t%-5s\n" "./submit.sh [OPTION]" 
     printf "\nOPTIONS\n" 
     printf "\n\t%-9s  %-40s"  "0.1"       "[setup PWA]"
+    printf "\n\t%-9s  %-40s"  "0.2"       "[execute PWA]"
     printf "\n\n" 
 }
 
@@ -24,7 +25,7 @@ usage_0_1() {
 
 usage_0_2() {
     printf "\n\t%-9s  %-40s"  ""          ""
-    printf "\n\t%-9s  %-40s"  "0.2.1"     ""
+    printf "\n\t%-9s  %-40s"  "0.2.1"     "[STEP 1] Calculate fun(i,j) using MC sample"
     printf "\n\t%-9s  %-40s"  ""           ""
     printf "\n"
 }
@@ -79,10 +80,12 @@ sub_0_2() {
 case $option in
     
     # --------------------------------------------------------------------------
-    #   
+    #  execute PWA 
     # --------------------------------------------------------------------------
 
-    0.2.1) echo "..."
+    0.2.1) echo "[STEP 1] Calculate fun(i,j) using MC sample..."
+           cd python
+           ./execute_pwa.py step1
 	       ;;
 
 esac
@@ -138,17 +141,17 @@ case $option in
            ;;  
         
     # --------------------------------------------------------------------------
-    #  
+    #  Execute PWA
     # --------------------------------------------------------------------------
 
-    0.2) echo "..."
+    0.2) echo "Executing PWA..."
          usage_0_2 
          echo "Please enter your option: " 
          read option  
          sub_0_2 option 
 	     ;;
 
-    0.2.*) echo "..."
+    0.2.*) echo "Executing PWA..."
            sub_0_2 option  
            ;;  
 
