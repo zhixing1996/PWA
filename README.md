@@ -1,2 +1,2 @@
 # PWA
-PWA example program <p> &rarr; </p>
+PWA example program 1<sup>-</sup> <p> &rarr; </p>
