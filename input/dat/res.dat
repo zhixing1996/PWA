@@ -1,0 +1,25 @@
+**** resonance and background function
+      parameter ( nkv1m=4   ) ! number of 1- K*
+      parameter ( nkv2p=2   ) ! number of 2+ K*
+      parameter ( nkv3m=1   ) ! number of 3- K*
+      parameter ( nkv4p=1   ) ! number of 4+ K*
+			
+      parameter ( nrv1m=7   ) ! number of 1- rho
+      parameter ( nrv3m=4   ) ! number of 3- rho
+			
+      parameter ( nav2p=3   ) ! number of 2+ a2
+      parameter ( nav4p=1   ) ! number of 4+ a4
+
+      parameter ( nbgxx=0   ) ! number of background
+***** constant in partial-wave-analysis code
+      parameter ( nkvxx=nkv1m+nkv2p+nkv3m+nkv4p ) ! total number of K*
+
+      parameter ( nrvxx=nrv1m+nrv3m             ) ! total number of rho
+
+      parameter ( navxx=nav2p+nav4p             ) ! total number of a
+
+      parameter ( nresx=2*nkvxx+nrvxx+navxx ) ! total resonance
+      parameter ( nmode=nresx+nbgxx             ) ! number of pwa mode
+      parameter ( mmode=nmode+1                 )
+      parameter ( npa=(2*nkvxx+nrvxx+navxx+nbgxx)*2+1   ) ! number of parameter
+      parameter ( nzz=npa*(npa+1)/2             ) ! error matrix element

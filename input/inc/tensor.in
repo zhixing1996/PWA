@@ -1,0 +1,13 @@
+***** variables in differential_cross_section
+        real*8 akx1(4),akx2(4),akx3(4)
+        real*8 sx1,sp1,q2jx1,q2x1,b1jx1,b2jx1,b3jx1,b4jx1,r2jx1,r2xx1
+        real*8 sx2,sp2,q2jx2,q2x2,b1jx2,b2jx2,b3jx2,b4jx2,r2jx2,r2xx2
+        real*8 sx3,sp3,q2jx3,q2x3,b1jx3,b2jx3,b3jx3,b4jx3,r2jx3,r2xx3
+        real*8 delx1(4,4),t1xx1(4),t1jx1(3),t3xx1(3,3,3),t3jx1(3,3,3)
+        real*8 delx2(4,4),t1xx2(4),t1jx2(3),t3xx2(3,3,3),t3jx2(3,3,3)
+        real*8 delx3(4,4),t1xx3(4),t1jx3(3),t3xx3(3,3,3),t3jx3(3,3,3)
+        real*8 t2xx1(3,3),t2jx1(3,3),t4xx1(3,3,3,3),t4jx1(3,3,3,3)
+        real*8 t2xx2(3,3),t2jx2(3,3),t4xx2(3,3,3,3),t4jx2(3,3,3,3)
+        real*8 t2xx3(3,3),t2jx3(3,3),t4xx3(3,3,3,3),t4jx3(3,3,3,3)
+
+

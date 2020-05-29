@@ -1,0 +1,1 @@
+/usr/bin/g77  $1.f -o $1.fexe  \

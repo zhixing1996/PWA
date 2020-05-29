@@ -1,0 +1,11 @@
+    centrifugal_barrier_factor_1 = 0.073333333
+    centrifugal_barrier_factor_2 = 0.073333333
+    centrifugal_barrier_factor_3 = 0.073333333
+
+
+**  centrifugal barrier factor
+**  fud=q0**2, q0=h/R, (see PRD5p624)
+**  where the constant h=0.197321 GeV.fm,
+**  R is the interaction radius
+**  R : 0.25---0.75 for meson
+**    : 0.50---1.00 for baryon

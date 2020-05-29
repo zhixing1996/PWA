@@ -1,0 +1,19 @@
+*****  the set of constants (set by subroutine metric)
+c--- eps   : 4-rank asymmetric tensor
+c--- del   : metric tensor
+c--- amj   : mass of J/psi       sj   : square of mass of J/psi
+c--- ampip : mass of pi+         spip : square of mass of pi+
+c--- ampiz : mass of pi0         spiz : square of mass of pi0
+c--- amkp  : mass of K+          skp  : square of mass of K+
+c--- amkz  : mass of K0          skz  : square of mass of K0
+c--- fud   : centrifugal barrier factors
+c--- ci    : unit of imaginary number
+        common/metr/eps(4,4,4,4),del(4,4)
+        common/mass1/amj,ampip,ampiz,amkp,amkz
+        common/mass2/sj,spip,spiz,skp,skz
+        common/bar/fud1,fud2,fud3
+        common/dvb/ci
+        real*8 eps,del,pn,fud1,fud2,fud3
+        real*8 amj,ampip,ampiz,amkp,amkz
+        real*8 sj,spip,spiz,skp,skz
+        complex*16 ci

@@ -1,0 +1,10 @@
+***** information on resonancs (read from file of res.in)
+c---  xmass  : mass  of hadrons (in GeV)
+c---  xwidth : width of hadrons (in GeV)
+c---  kff    : forms of breit-wigner
+c---  hres   : name  of hadrons
+      common/xinfo/xmass(nresx),xwidth(nresx),kff(nresx),hres(mmode)
+      real*8      xmass,xwidth
+      character hres*10
+      integer   kff
+
