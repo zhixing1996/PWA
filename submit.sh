@@ -64,7 +64,10 @@ case $option in
 	       ;;
 
     0.1.2) echo "Prepare four momentum files for data, PHSP MC and background..."
-           ./bin/exe pwa
+           cd python
+           ./get_momentum.py 4680 Dplus D data
+           ./get_momentum.py 4680 Dplus D background
+           ./get_momentum.py 4680 Dplus D mc
 	       ;;
 
 esac
