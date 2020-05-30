@@ -156,14 +156,18 @@ def PWA_NumericalResult():
             res_name[nres] = str((temp1[0])[6:17])
             nres += 1
     temp_file.close()
+    f_out = open('../output/out/coef.out', 'w')
     row = ''
     for ires in range(nres):
-        row += '&' + str(res_name[ires]) 
-    row = row.replace('\n', '') + '\\\\ \\hline'
-    print row     
+        if not ires == nres - 1:
+            row += str(res_name[ires]) + '& '
+        if ires == nres - 1:
+            row += str(res_name[ires])
+    row = row.replace('\n', '') + '\\\\ \\hline\n'
+    f_out.write(row)
     ntot = nres*nres/2 + nres
     frac = [0]*ntot
-    PWA_ProcessFile('../output/out/like.BEST')
+    PWA_ProcessFile('../output/out/like.best')
     file_BEST = open('../output/out/like.BEST')
     i = 0
     for line in file_BEST.readlines(): 
@@ -175,12 +179,13 @@ def PWA_NumericalResult():
         row = str(res_name[ires])
         for jres in range(nres):
             if (jres < ires):
-                row += '& 0 '
+                row += '& 0.000 '
             if (jres >= ires):
-                row += '&' + str(frac[i]) 
-        i=i+1
-    row=row.replace('\n', '') + '\\\\ \\hline'
-    print row     
+                row += '& ' + str(frac[i]) + ' '
+                i=i+1
+        row=row.replace('\n', '') + '\\\\ \\hline\n'
+        f_out.write(row)
+    f_out.close()
 
 def PWA_ProcessFile(filename = '../output/out/like.best'): 
     '''Process file: ../output/out/like.best --> ../output/out/like.BEST. '''
@@ -190,8 +195,7 @@ def PWA_ProcessFile(filename = '../output/out/like.best'):
         if line.find('*') > 0:
             if line.find('*(') < 0:
                 continue
-            if line.find('events') < 0 or line.find('=') < 0 or line.find(':') < 0 or line.find('sum') < 0 or len(line) == 0:
-                continue
+        if line.find('events') < 0 and line.find('=') < 0 and line.find(':') < 0 and line.find('sum') < 0 and not len(line) == 1 and not len(line) == 2:
             line_new = line
             file_BEST.write(line_new)
     file_BEST.close()

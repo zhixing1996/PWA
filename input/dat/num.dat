@@ -1,11 +1,11 @@
 ***** data and MC sample
-      parameter ( nmc=5189  ) ! number of MC sample
-      parameter ( ndt=828   ) ! number of data
-      parameter ( nbg1=0    ) ! number of background_1
-      parameter ( nbg2=0    ) ! number of background_2
-      parameter ( nbg3=0    ) ! number of background_3
+      parameter ( nmc=199727  ) ! number of MC sample
+      parameter ( ndt=4647    ) ! number of data
+      parameter ( nbg1=1298   ) ! number of background_1
+      parameter ( nbg2=0      ) ! number of background_2
+      parameter ( nbg3=0      ) ! number of background_3
 ***** resonance and background function
-      parameter ( nsig=ndt-0.64*nbg1-0.54*nbg2-0.34*nbg3 ) ! number of signal
+      parameter ( nsig=ndt-1.8*nbg1-0.54*nbg2-0.34*nbg3 ) ! number of signal
       parameter ( ntot=ndt+nbg1+nbg2+nbg3 ) ! number of total data
       parameter ( nd1=ntot+10,nd2=4,nda=nd1*nd2,nex=nda*4 )
 
