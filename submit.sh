@@ -28,6 +28,7 @@ usage_0_2() {
     printf "\n\t%-9s  %-40s"  "0.2.1"     "[STEP 1] Calculate fun(i,j) using MC sample"
     printf "\n\t%-9s  %-40s"  "0.2.2"     "[STEP 2] Optimize fractions of resonances"
     printf "\n\t%-9s  %-40s"  "0.2.3"     "[STEP 3] Output weight of MC sample"
+    printf "\n\t%-9s  %-40s"  "0.2.4"     "[STEP 4] Tablize the numberical results"
     printf "\n\t%-9s  %-40s"  ""           ""
     printf "\n"
 }
@@ -98,6 +99,11 @@ case $option in
     0.2.3) echo "[STEP 3] Output weight of MC sample..."
            cd python
            ./execute_pwa.py step3
+	       ;;
+
+    0.2.4) echo "[STEP 4] Tablize the numberical results..."
+           cd python
+           ./execute_pwa.py step4
 	       ;;
 
 esac
