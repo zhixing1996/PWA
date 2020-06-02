@@ -319,13 +319,13 @@ c        x(1)=i1
 cc---  normalized differential cross section
 c        dam2=funct(x)
 c        if (i1.le.ndt) then
-c          vmli=+alog(dam2)
+c          vmli=+dlog(dam2)
 c        elseif(i1.gt.ndt.and.i1.le.(ndt+nbg1)) then 
-c          vmli=-0.64*alog(dam2)
+c          vmli=-1.80*dlog(dam2)
 c        elseif(i1.gt.(ndt+nbg1).and.i1.le.(ndt+nbg1+nbg2)) then 
-c          vmli=-0.54*alog(dam2)
+c          vmli=-0.00*dlog(dam2)
 c        elseif(i1.gt.(ndt+nbg1+nbg2).and.i1.le.(ntot)) then 
-c          vmli=-0.34*alog(dam2)
+c          vmli=-0.00*dlog(dam2)
 c        endif
 c        vml=vml-vmli
 c      enddo
@@ -2088,9 +2088,9 @@ c-----maximum liklehood
  5    continue
 
 c      if(l1.gt.ndt.and.l1.le.ntot)             we=-0.6
-      if(l1.gt.ndt.and.l1.le.(ndt+nbg1))             we=-0.64
-      if(l1.gt.(ndt+nbg1).and.l1.le.(ndt+nbg1+nbg2)) we=-0.54
-      if(l1.gt.(ndt+nbg1+nbg2).and.l1.le.(ntot))     we=-0.34
+      if(l1.gt.ndt.and.l1.le.(ndt+nbg1))             we=-1.80
+      if(l1.gt.(ndt+nbg1).and.l1.le.(ndt+nbg1+nbg2)) we=-0.00
+      if(l1.gt.(ndt+nbg1+nbg2).and.l1.le.(ntot))     we=-0.00
 **      if(l1.gt.Nt1.and.l1.le.nt)    we=-1.0
       s=s-log(y)*we
       y=-y
